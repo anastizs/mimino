@@ -1,0 +1,38 @@
+.button-form {
+    width: 384px;
+    height: 64px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-accent-yellow);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    
+    //text
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-white);
+    text-transform: uppercase;
+
+    transition-property: background-color, color;
+    transition-duration: var(--animation-time);
+    transition-timing-function: var(--bezier-function);
+
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-accent-yellow);
+        color: var(--color-black);
+    }
+
+    @media screen and (max-width: 414px) {
+        max-width: 384px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 592px;
+        font-size: 24px;
+        line-height: 1.208;
+    }
+}
